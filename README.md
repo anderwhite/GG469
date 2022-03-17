@@ -1,0 +1,17 @@
+## Part I: Analysis
+
+# Specific Tasks:
+
+1. Designate Core areas
+2. Designate Existing Corridor connections
+3. Designate Potential Corridors
+4. Plot your design indicating existing land use and the three components of the Natural Heritage system: Core areas, Existing Corridors, and Potential Corridors
+
+## Part II: Dissemination
+
+Create a web map application using R/RStudio/leaflet to communicate your system design.
+
+# Specific Tasks:
+
+1. Write fully commented R code to create a new leaflet map widget and add the elements of your Natural Heritage System components as shapefiles to the map widget.
+2. Use addTiles() to add a background map to the map widget. (see the provided text file "leafletshapeex.txt" to see an example of adding shapefiles to a leaflet map widget)
