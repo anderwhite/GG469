@@ -1,3 +1,7 @@
+### GG 469 Wint 2022 - Project Outline
+
+Create a design for a Natural Heritage System (Greenlands System) for the City of Brampton, Ontario. Work primarly within the study area but consider adjacent areas and there effect on your design.  Use, Forman, R.T.T. Some general principles of landscape and regional ecology. Landscape Ecol 10, 133–142 (1995) as a primary source to understand the basic tenants of a good natural heritage system design.
+
 ## Part I: Analysis
 
 # Specific Tasks:
