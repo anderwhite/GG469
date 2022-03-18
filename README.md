@@ -19,3 +19,4 @@ Create a web map application using R/RStudio/leaflet to communicate your system 
 
 1. Write fully commented R code to create a new leaflet map widget and add the elements of your Natural Heritage System components as shapefiles to the map widget.
 2. Use addTiles() to add a background map to the map widget. (see the provided text file "leafletshapeex.txt" to see an example of adding shapefiles to a leaflet map widget)
+
