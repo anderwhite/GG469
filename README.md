@@ -20,3 +20,26 @@ Create a web map application using R/RStudio/leaflet to communicate your system 
 1. Write fully commented R code to create a new leaflet map widget and add the elements of your Natural Heritage System components as shapefiles to the map widget.
 2. Use addTiles() to add a background map to the map widget. (see the provided text file "leafletshapeex.txt" to see an example of adding shapefiles to a leaflet map widget)
 
+
+## GIS Processes
+
+- Define site boundary
+- Add Source Layers
+- Separate ELC land uses into separate land use types
+    - Woodlands
+    - Wetlands
+    - Watercourses
+    - Cultural features
+    - Agriculture
+    - Development
+- Create Buffers based on project research. 
+    - Buffers distance of 60 meters was selected for 
+
+## Difficulties
+
+- Collaborations, No effective Multi-User GIS software, 
+- Data Sources, Variations in source data availability,
+    - Only Raster Imagery Available was Provided .TIF from 1996, original plan was to get addition imagery for modern date to provide comparison. 
+- Automation/ Mechanization of organization of a organic/ Natural feature structure
+- 
+WGS 84 - EPSG:4326
