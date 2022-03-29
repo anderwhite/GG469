@@ -13,19 +13,20 @@ Boarder was removed by adding "0" to the No Data Value property for the layer, w
 **BEFORE** - With Borders.
 ![TIF_WithBorder](/imgs/TIF_WithBorder.jpg)
 **AFTER** - Without Borders.
-![TIF_WithBorder](/imgs/TIF_WithoutBorder.jpg)
+![TIF_WithoutBorder](/imgs/TIF_WithoutBorder.jpg)
 
 **Separation of Land-use Features** - The primary layer used in this project was "elc_cvc_nad83v2sel", mapping the Ecological Land Classification (ELC) of our study area, preformed by Credit Valley Conservation (CVC). Using the Split Vector Layer tool, selecting for 'TYPE' we were able to create separate layers for all 23 types. 
 
 Due to the timeframe and relative scope of this project we were less concerned on the exact ELC type (eg. Coniferous Forest) and more on the overarching land use (e,g Forest), for this reason we then merged similar types. This left us with layers for Woodlands, Wetlands, Cultural Lands, Developed Lands, and Agricultural lands. 
 
 Clipped the Watercourse layer from Ont_GeoHub, then using the Attributes table manually selected each segment of the credit river and merged to create a single "CreditRiver_Main", then used the Difference tool with that to separate all the tributaries off of the main, saving and labeling them "CreditRiver_Tribs". 
+
 **BEFORE** - ELC Un-edited
 ![ELC_Unedited](/imgs/ELC_Type_Unedited.jpg)
 **AFTER** - ELC Seperated
 ![ELC_Unedited](/imgs/ELC_Type_Seperated.jpg)
 
-**Determining Areas for NHS Growth** - With the objective of strengthining or enlarging the exsiting natural areas, we had to define where we could realesticly expand protected areas. the conclustion was existing farm lands were the most likely place to expand and thast any 'Urban' or 'Developed' area would be out of bounds. 
+**Determining Areas for NHS Growth** - With the objective of strengthening or enlarging the existing natural areas, we had to define where we could realistically expand protected areas. The conclusion was existing farm lands were the most likely place to expand and that any 'Urban' or 'Developed' area would be out of bounds. 
 
 
 
