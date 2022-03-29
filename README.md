@@ -26,15 +26,16 @@ Clipped the Watercourse layer from Ont_GeoHub, then using the Attributes table m
 **AFTER** - ELC Separated
 ![ELC_Unedited](/imgs/ELC_Type_Seperated.jpg "ELC Type Separated")
 
-**Determining Areas for NHS Growth** - With the objective of strengthening or enlarging the existing natural areas, we had to define where we could realistically expand protected areas. The conclusion was existing farm lands were the most likely place to expand and that any 'Urban' or 'Developed' area would be out of bounds. Using our groups research on best practices we determined that expanding areas by a 60 meter buffer would provide a significant increase in protection for most terrestrial and aquatic species likely found in this area. Buffers ranging form 20 meter to 120 meters were applied to the land uses types in varying combinations, but ultimately a consistent 60 meter buffer on all types seamed most pragmatic. We then removed any buffer area that fell within the "Developed" layer" ensuring our NHS would only grow into agricultural areas. (See "NHS_Feature)
+**Determining Areas for NHS Growth** - With the objective of strengthening or enlarging the existing natural areas, we had to define where we could realistically expand. The conclusion was that agricultural lands were the most likely candidate for naturalizations and that any 'Urban' or 'Developed' area would be out of bounds. Using our groups research on best practices, we determined that expanding our existing natural areas by a 60 meter buffer would provide a significant increase in protection for most terrestrial and aquatic species likely found in this area. Buffers ranging from 20 meter to 120 meters were applied to the land uses types in varying combinations, but ultimately a consistent 60 meter buffer on all types seamed most pragmatic. We then removed any buffer area that fell within the "Developed" layer" ensuring our NHS would only grow into agricultural areas. (See "NHS_Feature)
 
 ![NHS_Features](/imgs/NHS_Features.jpg "NHS Features")
 
+**Formatting Layer for Leaflet** - The final portion of work done in QGIs was to optimize for decimation, in this case interactive web mapping using leaflet.js {Leaflet Website](https://leafletjs.com/SlavaUkraini/). 
 
 ## Difficulties
-Missing data in uper stream humna error
-Couldnt clip out roads, 
-This NHS is a guide for where protected area should grow, actual areas chnaged should be delath with on a small scale proejct bases.
+Missing data in upper stream human error
+Couldn't clip out roads, 
+This NHS is a guide for where protected area should grow, actual areas changed should be dealt with on a small scale project bases.
 - Collaborations, No effective Multi-User GIS software, 
 - Data Sources, Variations in source data availability,
     - Only Raster Imagery Available was Provided .TIF from 1996, original plan was to get addition imagery for modern date to provide comparison. 
