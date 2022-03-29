@@ -22,16 +22,19 @@ Due to the timeframe and relative scope of this project we were less concerned o
 Clipped the Watercourse layer from Ont_GeoHub, then using the Attributes table manually selected each segment of the credit river and merged to create a single "CreditRiver_Main", then used the Difference tool with that to separate all the tributaries off of the main, saving and labeling them "CreditRiver_Tribs". 
 
 **BEFORE** - ELC Un-edited
-![ELC_Unedited](/imgs/ELC_Type_Unedited.jpg)
-**AFTER** - ELC Seperated
-![ELC_Unedited](/imgs/ELC_Type_Seperated.jpg)
+![ELC_Unedited](/imgs/ELC_Type_Unedited.jpg "ELC Type Unedited")
+**AFTER** - ELC Separated
+![ELC_Unedited](/imgs/ELC_Type_Seperated.jpg "ELC Type Separated")
 
-**Determining Areas for NHS Growth** - With the objective of strengthening or enlarging the existing natural areas, we had to define where we could realistically expand protected areas. The conclusion was existing farm lands were the most likely place to expand and that any 'Urban' or 'Developed' area would be out of bounds. 
+**Determining Areas for NHS Growth** - With the objective of strengthening or enlarging the existing natural areas, we had to define where we could realistically expand protected areas. The conclusion was existing farm lands were the most likely place to expand and that any 'Urban' or 'Developed' area would be out of bounds. Using our groups research on best practices we determined that expanding areas by a 60 meter buffer would provide a significant increase in protection for most terrestrial and aquatic species likely found in this area. Buffers ranging form 20 meter to 120 meters were applied to the land uses types in varying combinations, but ultimately a consistent 60 meter buffer on all types seamed most pragmatic. We then removed any buffer area that fell within the "Developed" layer" ensuring our NHS would only grow into agricultural areas. (See "NHS_Feature)
 
+![NHS_Features](/imgs/NHS_Features.jpg "NHS Features")
 
 
 ## Difficulties
-
+Missing data in uper stream humna error
+Couldnt clip out roads, 
+This NHS is a guide for where protected area should grow, actual areas chnaged should be delath with on a small scale proejct bases.
 - Collaborations, No effective Multi-User GIS software, 
 - Data Sources, Variations in source data availability,
     - Only Raster Imagery Available was Provided .TIF from 1996, original plan was to get addition imagery for modern date to provide comparison. 
