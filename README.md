@@ -1,6 +1,6 @@
-# GG 469 Wint 2022 - Project Outline
+# Brampton Natural Heritage System (NHS) Mapping
 
-Create a design for a Natural Heritage System (Greenlands System) for the City of Brampton, Ontario. Work primarly within the study area but consider adjacent areas and there effect on your design.  Use, Forman, R.T.T. Some general principles of landscape and regional ecology. Landscape Ecol 10, 133–142 (1995) as a primary source to understand the basic tenants of a good natural heritage system design.
+**Project Description** - Our Team set out to re-design the Natural Heritage System (Greenland's System) for the City of Brampton, Ontario. Work primary within the study area but consider adjacent areas and there effect on your design. Our team worked with data from the year 1996, prior to the cities significant growth. The results are meant to show areas that could have potentially been naturalized had a more aggressive NHS been put in place at this time. Use, Forman, R.T.T. Some general principles of landscape and regional ecology. We used Landscape Ecology 10, 133–142 (1995) as a primary source to understand the basic tenants of a good natural heritage system design.
 
 ## Project Breakdown (Process)
 
@@ -26,11 +26,13 @@ Clipped the Watercourse layer from Ont_GeoHub, then using the Attributes table m
 **AFTER** - ELC Separated
 ![ELC_Unedited](/imgs/ELC_Type_Seperated.jpg "ELC Type Separated")
 
-**Determining Areas for NHS Growth** - With the objective of strengthening or enlarging the existing natural areas, we had to define where we could realistically expand. The conclusion was that agricultural lands were the most likely candidate for naturalizations and that any 'Urban' or 'Developed' area would be out of bounds. Using our groups research on best practices, we determined that expanding our existing natural areas by a 60 meter buffer would provide a significant increase in protection for most terrestrial and aquatic species likely found in this area. Buffers ranging from 20 meter to 120 meters were applied to the land uses types in varying combinations, but ultimately a consistent 60 meter buffer on all types seamed most pragmatic. We then removed any buffer area that fell within the "Developed" layer" ensuring our NHS would only grow into agricultural areas. (See "NHS_Feature)
+**Determining Areas for NHS Growth** - With the objective of strengthening or enlarging the existing natural areas, we had to define where we could realistically expand. The conclusion was that agricultural lands were the most likely candidate for naturalizations and that any 'Urban' or 'Developed' area would be out of bounds. Using our groups research on best practices, we determined that expanding our existing natural areas by a 60 meter buffer would provide a significant increase in protection for most terrestrial and aquatic species likely found in this area. Buffers ranging from 20 meter to 120 meters were applied to the land uses types in varying combinations, but ultimately a consistent 60 meter buffer on all types seamed most pragmatic. We then removed any buffer area that fell within the "Developed" layer" ensuring our NHS would only grow into agricultural areas. (See "NHS_Feature")
 
 ![NHS_Features](/imgs/NHS_Features.jpg "NHS Features")
 
-**Formatting Layer for Leaflet** - The final portion of work done in QGIs was to optimize for decimation, in this case interactive web mapping using leaflet.js [Leaflet Website](https://leafletjs.com/SlavaUkraini/). 
+**Formatting Layer for Leaflet** - The final portion of work done in QGIs was to optimize for decimation, in this case interactive web mapping using [Leaflet.js](https://leafletjs.com/SlavaUkraini/). Our objective here was to create separate, selectable features for Core Area, Corridor Area and Steppingstone Areas. Using the 'NHS_Features_Final', we manually delineated each feature (which were comprised of the woodland, wetland, and cultural areas), creating separate shape files for each. This resulted in 100 shape files, which were then merged into the single part layer 'NHS_Features_Leaflet', as saved in the projection WGS84 (EPSG:4326), the preferred projection for Leaflet. There appeared to be no effective way to automate the delineation of features as it was not based on attributes but rather by visual extend - which areas look like core vs corridor based on size and shape. (See image of "NHS_Features_Leaflet" with a feature selected.)
+
+![NHS_Features_Leaflet](/imgs/NHS_Features_Leaflet_Select.jpg)
 
 ## Difficulties
 Missing data in upper stream human error
