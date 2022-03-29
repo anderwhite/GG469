@@ -1,6 +1,6 @@
 # Brampton Natural Heritage System (NHS) Mapping
 
-**Project Description** - Our Team set out to re-design the Natural Heritage System (Greenland's System) for the City of Brampton, Ontario. Work primary within the study area but consider adjacent areas and there effect on your design. Our team worked with data from the year 1996, prior to the cities significant growth. The results are meant to show areas that could have potentially been naturalized had a more aggressive NHS been put in place at this time. Use, Forman, R.T.T. Some general principles of landscape and regional ecology. We used Landscape Ecology 10, 133–142 (1995) as a primary source to understand the basic tenants of a good natural heritage system design.
+**Project Description** - Our Team set out to re-design the Natural Heritage System (Greenland's System) for the City of Brampton, Ontario. Work primary within the study area but consider adjacent areas and there effect on your design. Our team worked with data from the year 1996, prior to the cities significant growth. The results are meant to show areas that could have potentially been naturalized had a more aggressive NHS been put in place at this time. We used *Forman, R.T.T. Some general principles of landscape and regional ecology. Landscape Ecology 10, 133–142 (1995)* as a primary source to understand the basic tenants of a good natural heritage system design.
 
 ## Project Breakdown (Process)
 
@@ -8,7 +8,7 @@
 
 **Creation of Study Area** - Course provided data included a file of 28 separate .TIF Landsat imagery files, each a square with an edge length of 2.5km and an area of 6.25km². When all layers were projected they form a square with an area of approx. 175km², however each of the external images had a black "border". 
 
-Boarder was removed by adding "0" to the No Data Value property for the layer, which is remove some pixels from withing the map that had a value of "0", however it seamed a suitable workaround that did not ultimately affect the outcome of the map. (See Before and after pictures)
+Boarder was removed by adding "0" to the No Data Value property for the layer, which is remove some pixels from withing the map that had a value of "0", however it seamed a suitable workaround that did not ultimately affect the outcome of the map. The resulting image had an approx. area of 112km², and became the boundary for the remainder of the project. (See Before and after pictures)
 
 **BEFORE** - With Borders.
 ![TIF_WithBorder](/imgs/TIF_WithBorder2.jpg)
@@ -34,13 +34,14 @@ Clipped the Watercourse layer from Ont_GeoHub, then using the Attributes table m
 
 ![NHS_Features_Leaflet](/imgs/NHS_Features_Leaflet_Select.jpg)
 
-## Difficulties
-Missing data in upper stream human error
-Couldn't clip out roads, 
-This NHS is a guide for where protected area should grow, actual areas changed should be dealt with on a small scale project bases.
-- Collaborations, No effective Multi-User GIS software, 
-- Data Sources, Variations in source data availability,
-    - Only Raster Imagery Available was Provided .TIF from 1996, original plan was to get addition imagery for modern date to provide comparison. 
-- Automation/ Mechanization of organization of a organic/ Natural feature structure
-- 
-WGS 84 - EPSG:4326
+**Final Map**
+Below is the link to the completed interactive project map.
+
+[Brampton_NHS_WebMap]()
+
+## Difficulties and Future improvement's
+Although this project appears fairly straightforward, much of the difficulties, including trail and error, where not show. The following points are areas where improvement could be made either to the mapping itself or to the process in which we got there.
+1. **Human Error** - As is to be expected, some errors were made in the analysis of this dat, which could be rectified but would require redoing much of the work. An example of this is the removal of segments within "Fletchers Creek" in the East of McLaughlin Rd. S. Its unclear when these segments were removed, and once discovered the project was to far along to correct the error.
+2. **Lack of Experience** - Although to be expected as this project was completed as part of a university course, some time would have been saved, and results could have been better, had users been more familiar with the outcomes that various geoprocessing tools provided. As a result some trial and error (and googling) was required to determine the correct tool for a desired outcome and not all outcomes were achieved. An example of this is that the finished "NHS_Features_Leaflet" layer has not been clipped to the major road network of the city, as was done with the 'Developed Area'. Doing so would have provided a clearer understanding of where the NHS could and could not grow, but was unfortunately to complex process for the user to complete. 
+3. **Multi-User Collaboration** - Although there are systems and methods for multiple users working simultaneous or in sync with each on a GIS based project, they are not as easily set up as say a shared google doc file, but rather are made up of predefined and registered users collaboration over the long term. This meant that within our team, the GIS analysis was completed by a single user, with Research, Report Writing, Presentation creation, and .R Code Development becoming the domain of the remaining team members. Although this was a less "collaborative" approach, it did allow each member to hyper focus on there own domain, which lead to fast and effective completion of the workload. 
+4. **Lack of Public Data** - As with many project your scope is determined by the available data. Our team had initially thought to create two end maps, one should where we would expand the NHS in 1996 (which is what we did) AND where we could expand now in 2022 with development having occurred. The issue we were faced with was that we could not find an additional data source containing the same layers as the provided data for the current year (or any year in the 2000's). Data was available at cost from the Province of Ontario, but that was not an option for this project.
