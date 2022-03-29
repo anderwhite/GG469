@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <h2>Project Breakdown (Process)</h2>
+    <h1>Project Breakdown (Process)</h1>
 
     <p>
         <b>Data Acquisition and Analysis</b> - Reviewing all provided data and its metadata, and selecting additional,
@@ -17,7 +17,7 @@
         <b>Creation of Study Area</b> - Course provided data included a file of 28 separate .TIF Landsat imagery files,
         each a square with an edge length of 2.5km and an area of 6.25km². When all layers were projected they form a
         square with an area of approx. 175km², however each of the external images had a black "border".
-
+    
         Boarder was removed by adding "0" to the No Data Value property for the layer, which is remove some pixels from
         withing the map that had a value of "0", however it seamed a suitable workaround that did not ultimately affect
         the outcome of the map. The resulting image had an approx. area of 112km², and became the boundary for the
@@ -32,7 +32,7 @@
         ![TIF_WithoutBorder](/imgs/TIF_WithoutBorder2.jpg)
     </p>
 
-
+    
     **Separation of Land-use Features** - The primary layer used in this project was "elc_cvc_nad83v2sel", mapping
     the Ecological Land Classification (ELC) of our study area, preformed by Credit Valley Conservation (CVC). Using
     the Split Vector Layer tool, selecting for 'TYPE' we were able to create separate layers for all 23 types.
