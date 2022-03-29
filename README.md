@@ -1,6 +1,6 @@
 # Brampton Natural Heritage System (NHS) Mapping
 
-**Project Description** - Our Team set out to re-design the Natural Heritage System (Greenland's System) for the City of Brampton, Ontario. Work primary within the study area but consider adjacent areas and there effect on your design. Our team worked with data from the year 1996, prior to the cities significant growth. The results are meant to show areas that could have potentially been naturalized had a more aggressive NHS been put in place at this time. We used *Forman, R.T.T. Some general principles of landscape and regional ecology. Landscape Ecology 10, 133–142 (1995)* as a primary source to understand the basic tenants of a good natural heritage system design.
+**Project Description** - Our Team set out to re-design the Natural Heritage System (Greenland's System) for the City of Brampton, Ontario. The data used was from the year 1996, prior to the cities significant growth. The results are meant to show areas that could have potentially been naturalized had a more aggressive NHS been put in place at this time. We used *Forman, R.T.T. Some general principles of landscape and regional ecology. Landscape Ecology 10, 133–142 (1995)* as a primary source to understand the basic tenants of a good natural heritage system design. The finsihed product for this project is a Interactive Web Map using Leaflet.js. 
 
 ## Project Breakdown (Process)
 
