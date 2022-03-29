@@ -11,9 +11,9 @@ Create a design for a Natural Heritage System (Greenlands System) for the City o
 Boarder was removed by adding "0" to the No Data Value property for the layer, which is remove some pixels from withing the map that had a value of "0", however it seamed a suitable workaround that did not ultimately affect the outcome of the map. (See Before and after pictures)
 
 **BEFORE** - With Borders.
-![TIF_WithBorder](/imgs/TIF_WithBorder.jpg)
+![TIF_WithBorder](/imgs/TIF_WithBorder2.jpg)
 **AFTER** - Without Borders.
-![TIF_WithoutBorder](/imgs/TIF_WithoutBorder.jpg)
+![TIF_WithoutBorder](/imgs/TIF_WithoutBorder2.jpg)
 
 **Separation of Land-use Features** - The primary layer used in this project was "elc_cvc_nad83v2sel", mapping the Ecological Land Classification (ELC) of our study area, preformed by Credit Valley Conservation (CVC). Using the Split Vector Layer tool, selecting for 'TYPE' we were able to create separate layers for all 23 types. 
 
