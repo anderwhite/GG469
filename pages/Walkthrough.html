@@ -2,11 +2,47 @@
 <html>
 
 <head>
+    <style>
+        img.maps {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            widows: 90%;
+        }
+        
+        * {
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
 
+
+        }
+
+        body {
+            background-color: ghostwhite;
+            margin-bottom: 10%;
+            margin-top: 2%;
+
+        }
+
+        h1 {
+            color: black;
+            background-color: inherit;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 300%;
+
+        }
+
+        p {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 100%;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Project Breakdown (Process)</h1>
+    <h1>Project Breakdown</h1>
 
     <p>
         <b>Data Acquisition and Analysis</b> - Reviewing all provided data and its metadata, and selecting additional,
@@ -17,70 +53,76 @@
         <b>Creation of Study Area</b> - Course provided data included a file of 28 separate .TIF Landsat imagery files,
         each a square with an edge length of 2.5km and an area of 6.25km². When all layers were projected they form a
         square with an area of approx. 175km², however each of the external images had a black "border".
-    
         Boarder was removed by adding "0" to the No Data Value property for the layer, which is remove some pixels from
         withing the map that had a value of "0", however it seamed a suitable workaround that did not ultimately affect
         the outcome of the map. The resulting image had an approx. area of 112km², and became the boundary for the
         remainder of the project. (See Before and after pictures)
     </p>
 
+    <p> <b>BEFORE</b> - With Borders.</p>
+    <img class="maps" src="file:///C:/batcave/GG469/imgs/TIF_WithBorder2.jpg" alt="TIFF with Borders">
+
+    <p><b>AFTER</b> - Without Borders.</p>
+    <img class="maps" src="file:///C:/batcave/GG469/imgs/TIF_WithoutBorder2.jpg" alt="TIFF with Borders">
+
     <p>
-        <img src="/imgs/TIF_WithBorder2.jpg" alt="TIFF with Borders">
-        <b>BEFORE</b> - With Borders.
-        ![TIF_WithBorder](/imgs/TIF_WithBorder2.jpg)
-
-        <b>AFTER</b> - Without Borders.
-        ![TIF_WithoutBorder](/imgs/TIF_WithoutBorder2.jpg)
+        <b>Separation of Land-use Features</b> - The primary layer used in this project was "elc_cvc_nad83v2sel",
+        mapping the Ecological Land Classification (ELC) of our study area, preformed by Credit Valley Conservation
+        (CVC). Using
+        the Split Vector Layer tool, selecting for 'TYPE' we were able to create separate layers for all 23 types.
+        <br><br>
+        Due to the timeframe and relative scope of this project we were less concerned on the exact ELC type (eg.
+        Coniferous Forest) and more on the overarching land use (e,g Forest), for this reason we then merged similar
+        types. This left us with layers for Woodlands, Wetlands, Cultural Lands, Developed Lands, and Agricultural
+        lands.
+        <br><br>
+        We then clipped the Watercourse layer from Ont_GeoHub, then using the Attributes table manually selected each
+        segment of
+        the credit river and merged to create a single "CreditRiver_Main", then used the Difference tool with that to
+        separate all the tributaries off of the main, saving and labeling them "CreditRiver_Tribs".
     </p>
 
-    
-    **Separation of Land-use Features** - The primary layer used in this project was "elc_cvc_nad83v2sel", mapping
-    the Ecological Land Classification (ELC) of our study area, preformed by Credit Valley Conservation (CVC). Using
-    the Split Vector Layer tool, selecting for 'TYPE' we were able to create separate layers for all 23 types.
+    <p> <b>BEFORE</b> - With Borders.</p>
+    <img class="maps" src="file:///C:/batcave/GG469/imgs/ELC_Type_Unedited.jpg" alt="TIFF with Borders">
 
-    Due to the timeframe and relative scope of this project we were less concerned on the exact ELC type (eg.
-    Coniferous Forest) and more on the overarching land use (e,g Forest), for this reason we then merged similar
-    types. This left us with layers for Woodlands, Wetlands, Cultural Lands, Developed Lands, and Agricultural
-    lands.
+    <p><b>AFTER</b> - Without Borders.</p>
+    <img class="maps" src="file:///C:/batcave/GG469/imgs/ELC_Type_Seperated.jpg" alt="TIFF with Borders">
 
-    Clipped the Watercourse layer from Ont_GeoHub, then using the Attributes table manually selected each segment of
-    the credit river and merged to create a single "CreditRiver_Main", then used the Difference tool with that to
-    separate all the tributaries off of the main, saving and labeling them "CreditRiver_Tribs".
-
-    **BEFORE** - ELC Un-edited
-    ![ELC_Unedited](/imgs/ELC_Type_Unedited.jpg "ELC Type Unedited")
-    **AFTER** - ELC Separated
-    ![ELC_Unedited](/imgs/ELC_Type_Seperated.jpg "ELC Type Separated")
-
-    **Determining Areas for NHS Growth** - With the objective of strengthening or enlarging the existing natural
-    areas, we had to define where we could realistically expand. The conclusion was that agricultural lands were the
-    most likely candidate for naturalizations and that any 'Urban' or 'Developed' area would be out of bounds. Using
-    our groups research on best practices, we determined that expanding our existing natural areas by a 60 meter
-    buffer would provide a significant increase in protection for most terrestrial and aquatic species likely found
-    in this area. Buffers ranging from 20 meter to 120 meters were applied to the land uses types in varying
-    combinations, but ultimately a consistent 60 meter buffer on all types seamed most pragmatic. We then removed
-    any buffer area that fell within the "Developed" layer" ensuring our NHS would only grow into agricultural
-    areas. (See "NHS_Feature")
-
-    ![NHS_Features](/imgs/NHS_Features.jpg "NHS Features")
-
-    **Formatting Layer for Leaflet** - The final portion of work done in QGIs was to optimize for decimation, in
-    this case interactive web mapping using [Leaflet.js](https://leafletjs.com/SlavaUkraini/). Our objective here
-    was to create separate, selectable features for Core Area, Corridor Area and Steppingstone Areas. Using the
-    'NHS_Features_Final', we manually delineated each feature (which were comprised of the woodland, wetland, and
-    cultural areas), creating separate shape files for each. This resulted in 100 shape files, which were then
-    merged into the single part layer 'NHS_Features_Leaflet', as saved in the projection WGS84 (EPSG:4326), the
-    preferred projection for Leaflet. There appeared to be no effective way to automate the delineation of features
-    as it was not based on attributes but rather by visual extend - which areas look like core vs corridor based on
-    size and shape. (See image of "NHS_Features_Leaflet" with a feature selected.)
-
-    ![NHS_Features_Leaflet](/imgs/NHS_Features_Leaflet_Select.jpg)
-
-    **Final Map**
-    Below is the link to the completed interactive project map.
-
-    [Brampton_NHS_WebMap]()
+    <p>
+        <b>Determining Areas for NHS Growth</b> - With the objective of strengthening or enlarging the existing natural
+        areas, we had to define where we could realistically expand. The conclusion was that agricultural lands were the
+        most likely candidate for naturalizations and that any 'Urban' or 'Developed' area would be out of bounds. Using
+        our groups research on best practices, we determined that expanding our existing natural areas by a 60 meter
+        buffer would provide a significant increase in protection for most terrestrial and aquatic species likely found
+        in this area. Buffers ranging from 20 meter to 120 meters were applied to the land uses types in varying
+        combinations, but ultimately a consistent 60 meter buffer on all types seamed most pragmatic. We then removed
+        any buffer area that fell within the "Developed" layer" ensuring our NHS would only grow into agricultural
+        areas. (See "NHS_Feature")
     </p>
+
+    <p><b>AFTER</b> - Without Borders.</p>
+    <img class="maps" src="file:///C:/batcave/GG469/imgs/NHS_Features.jpg" alt="TIFF with Borders">
+
+    <p>
+        <b>Formatting Layer for Leaflet</b> - The final portion of work done in QGIs was to optimize for decimation, in
+        this case interactive web mapping using [Leaflet.js](https://leafletjs.com/SlavaUkraini/). Our objective here
+        was to create separate, selectable features for Core Area, Corridor Area and Steppingstone Areas. Using the
+        'NHS_Features_Final', we manually delineated each feature (which were comprised of the woodland, wetland, and
+        cultural areas), creating separate shape files for each. This resulted in 100 shape files, which were then
+        merged into the single part layer 'NHS_Features_Leaflet', as saved in the projection WGS84 (EPSG:4326), the
+        preferred projection for Leaflet. There appeared to be no effective way to automate the delineation of features
+        as it was not based on attributes but rather by visual extend - which areas look like core vs corridor based on
+        size and shape. (See image of "NHS_Features_Leaflet" with a feature selected.)
+    </p>
+
+    <p><b>AFTER</b> - Without Borders.</p>
+    <img class="maps" src="file:///C:/batcave/GG469/imgs/NHS_Features_Leaflet_Select.jpg" alt="TIFF with Borders">
+
+    <p>
+        **Final Map**
+        Below is the link to the completed interactive project map.
+    </p>
+
 </body>
 
 </html>
