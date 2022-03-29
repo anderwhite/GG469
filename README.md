@@ -23,17 +23,17 @@ Create a web map application using R/RStudio/leaflet to communicate your system 
 
 ## GIS Processes
 
-- Define site boundary
-- Add Source Layers
-- Separate ELC land uses into separate land use types
-    - Woodlands
-    - Wetlands
-    - Watercourses
-    - Cultural features
-    - Agriculture
-    - Development
-- Create Buffers based on project research. 
-    - Buffers distance of 60 meters was selected for 
+**Data Acquisition and Analysis** - Reviewing all provided data and its Metadata, and selecting additional, external data sets based on our discussions of project scope. 
+
+**Creation of Study Area** - Course provided data included a file of 28 separate .TIF Landsat imagery files, each a square with an edge length of 2.5km and an area of 6.25km². When all layers were projected they form a square with an area of approx. 175km², however each of the external images had a black "border". Boarder was removed by adding "0" to the No Data Value property for the layer, which is remove some pixels from withing the map that had a value of "0", however it seamed a suitable workaround that did not ultimately affect the outcome of the map. (See Before and after pictures)
+
+![TIF_WithBorder](./TIF_WithBorder.jpg)
+![TIF_WithBorder](./TIF_WithoutBorder.jpg)
+
+**Separation of Land-use Features** - The primary layer used in this project was "elc_cvc_nad83v2sel", mapping the Ecological Land Classification (ELC) of our study area, preformed by Credit Valley Conservation (CVC). Using the Split Vector Layer tool, selecting for 'TYPE' we were able to create 
+
+
+
 
 ## Difficulties
 
