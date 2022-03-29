@@ -30,7 +30,7 @@ Clipped the Watercourse layer from Ont_GeoHub, then using the Attributes table m
 
 ![NHS_Features](/imgs/NHS_Features.jpg "NHS Features")
 
-**Formatting Layer for Leaflet** - The final portion of work done in QGIs was to optimize for decimation, in this case interactive web mapping using leaflet.js {Leaflet Website](https://leafletjs.com/SlavaUkraini/). 
+**Formatting Layer for Leaflet** - The final portion of work done in QGIs was to optimize for decimation, in this case interactive web mapping using leaflet.js [Leaflet Website](https://leafletjs.com/SlavaUkraini/). 
 
 ## Difficulties
 Missing data in upper stream human error
