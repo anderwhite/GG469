@@ -6,7 +6,7 @@
 
 **Data Acquisition and Analysis** - Reviewing all provided data and its metadata, and selecting additional, external data sets based on our discussions of project scope. 
 
-**Creation of Study Area** - Course provided data included a file of 28 separate .TIF Landsat imagery files, each a square with an edge length of 2.5km and an area of 6.25km². When all layers were projected they form a square with an area of approx. 175km², however each of the external images had a black "border". 
+**Creation of Study Area** - Course provided data included a file of 28 separate .TIF Landsat imagery files, each a square with an edge length of 2.5km and an area of 6.25km². When all layers were projected they form an area of approx. 175km², however each of the external images had a black "border". 
 
 The border was removed by adding "0" to the No Data Value property for the layer, which did remove some pixels from within the map that had a value of "0" (aka. black), however it seamed a suitable workaround that did not adversely affect the final map outcome. The resulting image had an approx. area of 112km², and became the boundary for the remainder of the project. (See Before and after pictures)
 
