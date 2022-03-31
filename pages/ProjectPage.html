@@ -36,10 +36,10 @@
     <!--Everything within the following <Script> is now writen in JavaScript.-->
     <script>
         // This is where you set map Coordinates.
-        var mymap = L.map('map').setView([44.35936, -78.73686], 12);
+        var mymap = L.map('mymap').setView([44.35936, -78.73686], 12);
 
         //This is the 'Base Map', in this case from Mapbox, as per Leaflets recomendation.
-        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+       var basemap = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
             maxZoom: 18,
             id: 'mapbox/streets-v11',
@@ -48,21 +48,42 @@
             accessToken: 'pk.eyJ1IjoiYmFsZHRoZWJ1aWxkZXIiLCJhIjoiY2wwdjEwcmh0MTJvbDNpcDR2aXF4NDdyOCJ9.VYWB1ihniNYrFmofxDt4jA'
         }).addTo(mymap);
 
-        // This Is where I pull the .GeoJSON, Either from a local or Git directory (preferbaly Git).
-
-        /* $.getJSON("https://bitbucket.org/whalebiologist/website-map/raw/58abf2f24696fef437c294c02e55019d1c6554e4/churches_short.geojson", function (data) {
-            var ratIcon = L.icon({
-                iconUrl: 'http://maptimeboston.github.io/leaflet-intro/rat.png',
-                iconSize: [60, 50]
+        //This is creating the GeoJSON Polygon feature.
+        var Leaflet_Feature = {
+                "type": "Feature",
+                "properties": {
+                    "name": "Brampton NHS",
+                    "amenity": "Baseball Stadium",
+                     "popupContent": "This is where the Rockies play!"
+                    },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-104.99404, 39.75621]
+                    }
+                };
+        
+        // This is adding the GeoJSON layer to the map.
+        // Didn't work ---> L.geoJSON(Leaflet_Feature).addTo(mymap);
+        // Didn't work ---> var Leaflet_Feature = new L.Shapefile(‘Leaflet_Features_WGS84.zip’); shpfile.addTo(mymap);
+        
+        $.getJSON("", function (data) {
+                var ratIcon = L.icon({
+                    iconUrl: 'http://maptimeboston.github.io/leaflet-intro/rat.png',
+                    iconSize: [60, 50]
+                });
+                L.GeoJSON(data, {
+                    pointToLayer: function (feature, latlng) {
+                        var marker = L.marker(latlng, { icon: ratIcon });
+                        marker.bindPopup(feature.properties.Location + '<br/>' + feature.properties.OPEN_DT);
+                        return marker;
+                    }
+                }).addTo(map);
             });
-            L.GeoJSON(data, {
-                pointToLayer: function (feature, latlng) {
-                    var marker = L.marker(latlng, { icon: ratIcon });
-                    marker.bindPopup(feature.properties.Location + '<br/>' + feature.properties.OPEN_DT);
-                    return marker;
-                }
-            }).addTo(map);
-        });*/
+
+        // This is to add pop up markers
+        L.marker([44.35936, -78.73686]).addTo(mymap)
+            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+            .openPopup();
 
     </script>
 
